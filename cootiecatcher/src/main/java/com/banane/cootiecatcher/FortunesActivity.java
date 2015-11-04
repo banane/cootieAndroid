@@ -14,19 +14,18 @@ public class FortunesActivity extends ListActivity {
 
     private static final int REQUEST_CODE = 5;
     private static final int RESULT_OK = 1;
-    private String values[];
+    private String values[] = new String[8];
     private FortuneAdapter adapter;
     private String resetValues[];
+    private CootieApp app;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.fortunes_activity);
+        app = (CootieApp)getApplication();
+        System.arraycopy(app.values,0,values,0,8);
 
-
-        //todo check local storage otherwise:
-        values = resetValues;
-        //todo let user reset to factory values
         adapter = new FortuneAdapter(this, android.R.layout.simple_list_item_1,values, "fonts/WalterTurncoat.ttf");
 
         setListAdapter(adapter);
@@ -55,6 +54,7 @@ public class FortunesActivity extends ListActivity {
             int position = data.getIntExtra("position", 0);
             String fortune = data.getStringExtra("fortune");
             values[position] = fortune;
+            app.writeFortunesToPreferences(values);
             adapter.notifyDataSetChanged();
 
         } else {

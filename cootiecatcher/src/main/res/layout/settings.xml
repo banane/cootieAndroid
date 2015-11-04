@@ -6,6 +6,7 @@
     >
 
     <Button
+        android:id="@+id/fortunes_btn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/fortunes_button"
@@ -16,6 +17,7 @@
 
 
     <Button
+        android:id="@+id/contact_us_btn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/contact_us_button"
@@ -24,6 +26,7 @@
         />
 
     <Button
+        android:id="@+id/post_idea_btn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/post_idea_button"
@@ -32,6 +35,8 @@
         />
 
     <Button
+        android:id="@+id/forums_btn"
+
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/forums_button"
@@ -40,6 +45,8 @@
         />
 
     <Button
+        android:id="@+id/about_us_btn"
+
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/about_us_button"

@@ -22,12 +22,7 @@ public class FortunesActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.fortunes_activity);
-        resetValues = new String[] {  "You will be president.","Giraffes are neat.","Someone will steal your pencil.",
-        "Give someone a dollar.",
-        "Nobody gets you, like I get you.",
-        "Your secret is safe.",
-        "You will make an amazing pie.",
-        "Your wish will come true."};
+
 
         //todo check local storage otherwise:
         values = resetValues;

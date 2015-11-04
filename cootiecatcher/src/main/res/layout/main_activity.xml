@@ -3,20 +3,116 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/closed"
-        />
+        android:layout_weight="1"
+        android:background="@android:color/black"
+
+        >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:id="@+id/game_image"
+            android:src="@drawable/closed"
+            android:visibility="visible"
+            />
+        <LinearLayout
+            android:id="@+id/game_layout"
+            android:layout_width="fill_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            >
+            <LinearLayout
+                android:id="@+id/grid_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <Button
+                    android:id="@+id/top_left_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:onClick="clickTopLeft"
+                    />
+                <Button
+                    android:id="@+id/top_right_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:onClick="clickTopRight"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+                <Button
+                    android:id="@+id/bottom_left_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:onClick="clickBottomLeft"
+                    />
+                <Button
+                    android:id="@+id/bottom_right_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:onClick="clickBottomRight"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:text="Test Fortune blah blah blah"
+            android:textColor="@android:color/white"
+            android:id="@+id/reveal_fortune"
+            />
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/again_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/again_button"
+            android:visibility="invisible"
+            android:onClick="again"
+            android:layout_weight="1"
+            />
         <Button
             android:id="@+id/settings_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/settings_button"
             android:onClick="viewSettings"
+            android:layout_weight="1"
             />
 
     </LinearLayout>

@@ -10,4 +10,5 @@
     <string name="fortunes_button">Fortunes</string>
     <string name="save_fortune_btn">Save</string>
     <string name="clear_fortune_btn">Clear</string>
+    <string name="again_button">Again</string>
 </resources>

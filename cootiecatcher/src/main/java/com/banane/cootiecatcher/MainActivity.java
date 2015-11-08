@@ -105,6 +105,7 @@ public class MainActivity extends Activity {
         final int interval = 750;
         int duration = interval * count;
         animation = new AnimationDrawable();
+        animation.setOneShot(true);
 
         for(int i=0;i<count;i++){
             animation.addFrame(getResources().getDrawable(images[startingBit]),interval);
@@ -115,6 +116,7 @@ public class MainActivity extends Activity {
         state = startingBit +1; // pop it back into state
 
         gameImage.setImageDrawable(animation);
+
         gameImage.post(new Starter());
         Log.d(TAG, " count: " + count);
 
